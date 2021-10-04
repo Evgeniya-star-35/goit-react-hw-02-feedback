@@ -16,7 +16,6 @@ export default class Statistics extends Component {
   render() {
     return (
       <div className={s.wrapper}>
-        <h2 className={s.title}>Statistics</h2>
         <ul className={s.list}>
           <li className={s.item}>Good: {this.props.state.good}</li>
           <li className={s.item}>Neutral: {this.props.state.neutral}</li>

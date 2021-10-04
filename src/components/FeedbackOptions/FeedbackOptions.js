@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import s from './FeedbackOptions.module.css';
 import PropTypes from 'prop-types';
+import { v4 as uuidv4 } from 'uuid';
 
 export default class FeedbackOptions extends Component {
   static defaultProps = {
@@ -14,13 +15,12 @@ export default class FeedbackOptions extends Component {
   render() {
     return (
       <div className={s.feedback}>
-        <h1 className={s.title}>Please leave feedback</h1>
         <div className={s.allButton}>
           {this.props.options.map(btn => (
             <button
               className={s.button}
               value={btn}
-              key={btn}
+              key={uuidv4()}
               type="button"
               onClick={e => this.props.onLeaveFeedback(e)}
             >

@@ -46,20 +46,23 @@ class App extends Component {
     const btnNames = Object.keys(this.state);
     return (
       <Container>
-        <FeedbackOptions
-          options={btnNames}
-          onLeaveFeedback={this.onLeaveFeedback}
-        />
-
-        {this.countZero() ? (
-          <Notification message="No feedback given" />
-        ) : (
-          <Statistics
-            state={this.state}
-            total={this.countTotalFeedback()}
-            positivePercentage={this.countPositiveFeedbackPercentage()}
+        <Section title="Please leave feedback">
+          <FeedbackOptions
+            options={btnNames}
+            onLeaveFeedback={this.onLeaveFeedback}
           />
-        )}
+        </Section>
+        <Section title="Statistics">
+          {this.countZero() ? (
+            <Notification message="No feedback given" />
+          ) : (
+            <Statistics
+              state={this.state}
+              total={this.countTotalFeedback()}
+              positivePercentage={this.countPositiveFeedbackPercentage()}
+            />
+          )}
+        </Section>
       </Container>
     );
   }

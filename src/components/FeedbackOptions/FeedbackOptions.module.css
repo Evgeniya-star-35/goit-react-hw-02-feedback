@@ -2,11 +2,6 @@
   text-align: center;
 }
 
-.title {
-  font-size: 45px;
-  font-weight: 700;
-  margin-bottom: 50px;
-}
 .allButton {
   display: flex;
   justify-content: center;
