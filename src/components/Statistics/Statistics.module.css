@@ -1,0 +1,18 @@
+.wrapper {
+  margin-left: 50px;
+}
+.title {
+  font-size: 40px;
+  margin-left: 40px;
+}
+.list {
+  display: flex;
+  flex-direction: column;
+}
+.item {
+  font-size: 25px;
+  font-weight: bolder;
+}
+.item:not(:last-child) {
+  margin-bottom: 10px;
+}
