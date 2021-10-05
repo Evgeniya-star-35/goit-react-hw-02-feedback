@@ -3,7 +3,7 @@ import Statistics from './components/Statistics';
 import Notification from './components/Notification';
 import Container from './components/container';
 import Section from './components/Section';
-import React, { Component } from 'react';
+import { Component } from 'react';
 
 class App extends Component {
   state = {
