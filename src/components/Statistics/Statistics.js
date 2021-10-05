@@ -15,17 +15,15 @@ export default class Statistics extends Component {
   };
   render() {
     return (
-      <div className={s.wrapper}>
-        <ul className={s.list}>
-          <li className={s.item}>Good: {this.props.state.good}</li>
-          <li className={s.item}>Neutral: {this.props.state.neutral}</li>
-          <li className={s.item}>Bad: {this.props.state.bad}</li>
-          <li className={s.item}>Total: {this.props.total}</li>
-          <li className={s.item}>
-            Positive feedback: {this.props.positivePercentage} %
-          </li>
-        </ul>
-      </div>
+      <ul className={s.list}>
+        <li className={s.item}>Good: {this.props.state.good}</li>
+        <li className={s.item}>Neutral: {this.props.state.neutral}</li>
+        <li className={s.item}>Bad: {this.props.state.bad}</li>
+        <li className={s.item}>Total: {this.props.total}</li>
+        <li className={s.item}>
+          Positive feedback: {this.props.positivePercentage} %
+        </li>
+      </ul>
     );
   }
 }

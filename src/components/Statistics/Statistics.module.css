@@ -1,11 +1,7 @@
-.wrapper {
-  margin-left: 50px;
-}
-
 .list {
   display: flex;
   flex-direction: column;
-  padding-left: 150px;
+  margin-left: 200px;
 }
 .item {
   font-size: 25px;
