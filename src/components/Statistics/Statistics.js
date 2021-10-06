@@ -9,7 +9,7 @@ export default class Statistics extends Component {
     positivePercentage: 0,
   };
   static propTypes = {
-    state: PropTypes.PropTypes.object.isRequired,
+    state: PropTypes.object.isRequired,
     total: PropTypes.number.isRequired,
     positivePercentage: PropTypes.number.isRequired,
   };
