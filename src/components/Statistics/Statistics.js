@@ -9,20 +9,20 @@ export default class Statistics extends Component {
     positivePercentage: 0,
   };
   static propTypes = {
-    state: PropTypes.object.isRequired,
+    state: PropTypes.objectOf(PropTypes.number),
     total: PropTypes.number.isRequired,
     positivePercentage: PropTypes.number.isRequired,
   };
   render() {
+    const { good, neutral, bad } = this.props.state;
+    const { total, positivePercentage } = this.props;
     return (
       <ul className={s.list}>
-        <li className={s.item}>Good: {this.props.state.good}</li>
-        <li className={s.item}>Neutral: {this.props.state.neutral}</li>
-        <li className={s.item}>Bad: {this.props.state.bad}</li>
-        <li className={s.item}>Total: {this.props.total}</li>
-        <li className={s.item}>
-          Positive feedback: {this.props.positivePercentage} %
-        </li>
+        <li className={s.item}>Good: {good}</li>
+        <li className={s.item}>Neutral: {neutral}</li>
+        <li className={s.item}>Bad: {bad}</li>
+        <li className={s.item}>Total: {total}</li>
+        <li className={s.item}>Positive feedback: {positivePercentage} %</li>
       </ul>
     );
   }

@@ -24,8 +24,8 @@ class App extends Component {
 
   countTotalFeedback = () => {
     const statesValuesArr = Object.values(this.state);
-    return statesValuesArr.reduce((acc, val) => {
-      acc += val;
+    return statesValuesArr.reduce((acc, value) => {
+      acc += value;
       return acc;
     });
   };
@@ -44,12 +44,18 @@ class App extends Component {
 
   render() {
     const btnNames = Object.keys(this.state);
+    const {
+      onLeaveFeedback,
+      state,
+      countTotalFeedback,
+      countPositiveFeedbackPercentage,
+    } = this;
     return (
       <Container>
         <Section title="Please leave feedback">
           <FeedbackOptions
             options={btnNames}
-            onLeaveFeedback={this.onLeaveFeedback}
+            onLeaveFeedback={onLeaveFeedback}
           />
         </Section>
         <Section title="Statistics">
@@ -57,9 +63,9 @@ class App extends Component {
             <Notification message="No feedback given" />
           ) : (
             <Statistics
-              state={this.state}
-              total={this.countTotalFeedback()}
-              positivePercentage={this.countPositiveFeedbackPercentage()}
+              state={state}
+              total={countTotalFeedback()}
+              positivePercentage={countPositiveFeedbackPercentage()}
             />
           )}
         </Section>

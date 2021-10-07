@@ -12,15 +12,16 @@ export default class FeedbackOptions extends Component {
   };
 
   render() {
+    const { options, onLeaveFeedback } = this.props;
     return (
       <div className={s.allButton}>
-        {this.props.options.map((option, ind) => (
+        {options.map((option, ind) => (
           <button
             className={s.button}
             value={option}
             key={ind}
             type="button"
-            onClick={e => this.props.onLeaveFeedback(e)}
+            onClick={e => onLeaveFeedback(e)}
           >
             {option}
           </button>
